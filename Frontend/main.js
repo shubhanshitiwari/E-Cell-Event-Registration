@@ -13,9 +13,9 @@ cont.forEach(con => {
 //  api
 
 document.getElementById('registrationForm').addEventListener('submit', async (event) => {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault();
 
-    const formData = new FormData(event.target); // Gather form data
+    const formData = new FormData(event.target); 
 
     try {
         const response = await fetch('http://localhost:8080/register', {
