@@ -16,37 +16,37 @@
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">First Name*</span>
-                    <input type="text" name="firstName" placeholder="Enter your first name" required>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
                 </div>
         
                 <div class="input-box">
                     <span class="details">Last Name*</span>
-                    <input type="text" name="lastName" placeholder="Enter your last name" required>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
                 </div>
         
                 <div class="input-box">
                     <span class="details">Email*</span>
-                    <input type="email" name="email" placeholder="Enter your valid Email" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your valid Email" required>
                 </div>
         
                 <div class="input-box">
                     <span class="details">Mobile No.*</span>
-                    <input type="number" name="mobileNumber" placeholder="+91 xxxxxxxxxx" required>
+                    <input type="number" id="mobileNumber" name="mobileNumber" placeholder="+91 xxxxxxxxxx" required>
                 </div>
         
                 <div class="input-box">
                     <span class="details">College*</span>
-                    <input type="text" name="college" placeholder="Enter your college name" required>
+                    <input type="text" id="college" name="college" placeholder="Enter your college name" required>
                 </div>
         
                 <div class="input-box">
                     <span class="details">Branch*</span>
-                    <input type="text" name="branch" placeholder="Enter your branch name" required>
+                    <input type="text" id="branch" name="branch" placeholder="Enter your branch name" required>
                 </div>
         
                 <div class="input-box">
                     <span class="details">Enrollment No.*</span>
-                    <input type="text" name="enrollmentNo" placeholder="Enter your enrollment no." required>
+                    <input type="text" id="enrollmentNo" name="enrollmentNo" placeholder="Enter your enrollment no." required>
                 </div>
             </div>
         
@@ -72,7 +72,7 @@
             <!--Buttons-->
             <div class="btn">
                 <div class="button">
-                    <input type="submit" value="Register">
+                    <input type="submit" value="Register" id="submitButton">
                 </div>
                 <div class="button">
                     <input type="button" value="About Event">
@@ -81,10 +81,9 @@
         </form>  
     </div>
 
-
-
-
     <!--Script-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <script src="main.js"></script>
 </body>
 </html>

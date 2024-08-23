@@ -1,3 +1,5 @@
+
+
 let cont = document.querySelectorAll(".container")
 cont.forEach(con => {
     con.onmousemove = function(e){
@@ -8,33 +10,6 @@ cont.forEach(con => {
         con.style.setProperty("--y",y+"px")
     }
     
-});
-
-//  api
-
-document.getElementById('registrationForm').addEventListener('submit', async (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(event.target); 
-
-    try {
-        const response = await fetch('http://localhost:8080/register', {
-            method: 'POST',
-            body: formData // Send form data
-        });
-
-        if (response.ok) {
-            const result = await response.json();
-            console.log('Success:', result);
-            // Handle success (e.g., display a message or redirect)
-        } else {
-            console.error('Error:', response.statusText);
-            // Handle errors (e.g., display an error message)
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        // Handle fetch errors
-    }
 });
 
 const college = document.getElementById("college")
@@ -101,39 +76,65 @@ function validateForm() {
 }
 
 // confirmation message after submission of the form
-if (returnval = true) {
-    document.getElementById('submit').addEventListener('click', function (e) {
-        document.querySelector(".container").style.display = "none";
-        document.getElementById('confirmation-message').style.display = 'block';
+// if (returnval = true) {
+//     document.getElementById('submit').addEventListener('click', function (e) {
+//         document.querySelector(".container").style.display = "none";
+//         document.getElementById('confirmation-message').style.display = 'block';
 
-    })
+//     })
 
-}
+// }
 
-=======
-//  api
-
-document.getElementById('registrationForm').addEventListener('submit', async (event) => {
-    event.preventDefault(); // Prevent the default form submission
-
-    const formData = new FormData(event.target); // Gather form data
-
+// API
+async function registerUser(formData) {
     try {
-        const response = await fetch('http://localhost:8080/register', {
-            method: 'POST',
-            body: formData // Send form data
-        });
-
-        if (response.ok) {
-            const result = await response.json();
-            console.log('Success:', result);
-            // Handle success (e.g., display a message or redirect)
-        } else {
-            console.error('Error:', response.statusText);
-            // Handle errors (e.g., display an error message)
-        }
+      const response = await axios.post('http://localhost:8000/register', formData, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+    
+      // Success response
+      console.log('Registration successful:', response.data);
+      // handle success (e.g., show success message, redirect, etc.)
     } catch (error) {
-        console.error('Error:', error);
-        // Handle fetch errors
+      // Handle errors
+      if (error.response) {
+        // Server responded with a status other than 2xx
+        console.log('Registration failed:', error.response.data);
+      } else if (error.request) {
+        // No response received
+        console.error('No response received:', error.request);
+      } else {
+        // Other errors
+        console.error('Error occurred:', error.message);
+      }
+      // handle error (e.g., show error message)
     }
-});
+  }
+  
+  
+
+
+const form = document.getElementById('registrationForm');
+
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    
+    const formData = {
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        email: document.getElementById('email').value,
+        mobileNumber: document.getElementById('mobileNumber').value,
+        branch: document.getElementById('branch').value,
+        college: document.getElementById('college').value,
+        enrollmentNo: document.getElementById('enrollmentNo').value,
+        whyEvent: document.getElementById('whyEvent').value,
+        expectations: document.getElementById('expectations').value,
+        wantsUpdates: document.getElementById('wantsUpdates').value
+    };
+  
+    registerUser(formData);
+  });
+  //  api
