@@ -1,0 +1,220 @@
+/* body {
+    background-color: rgba(4, 0, 35, 255);
+} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ; 
+    color: aliceblue;
+}
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    background-color: rgba(4, 0, 35, 255);
+    align-items: center;
+}
+
+.container {
+    margin-top: 80px;
+    /* margin-bottom: 60px; */
+    max-width: 700px;
+    width: 100%;
+    background-color: rgba(99, 96, 120, 0.2);
+    border: 3px solid rgba(99, 96, 120, 0.2);
+    padding: 25px 30px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow:10px 10px rgb(31, 239, 203,0.1);
+
+}
+.container::before{
+    content: " ";
+    position: absolute;
+    background: radial-gradient(rgb(47, 189, 194), transparent,transparent);
+    width:100%;
+    height: 100%;
+    top:var(--y);
+    left: var(--x);
+    transform: translate(-50%,-50%);
+    opacity: 0.2;
+    transition: 0.5s,top 0s,left 0s;
+}
+.container:hover:before{
+      opacity: 0.3;
+      z-index: -10;
+}
+
+.container::after{
+    content: "";
+    position: absolute;
+    background-color: rgba(99, 96, 120, 0.9);
+    
+}
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: blue;
+}
+
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 10px 0;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(50% - 10px); }
+
+.user-details .input-box .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(99, 96, 120);
+    background-color: rgba(255,255,255,0.1);
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 14px;
+}
+.user-details .input-box input:hover ,textarea:hover{
+    border: 1px solid rgb(233, 233, 236);
+}
+ textarea {
+    padding: 5px;
+        width: 100%;
+        resize: none;
+        border-radius: 5px;
+        margin-bottom: 2px;
+        border: 1px solid rgb(99, 96, 120);
+        background-color: rgba(255,255,255,0.1);
+        font-size: 14px;
+    }
+.details2{
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 500;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+.button input{
+   padding: 7px;
+   border-radius: 10px;
+   margin-left:px;
+}
+
+
+.event-update {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 16px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.button input[type="submit"] {
+    padding: 10px 20px;
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    color: white; 
+    background: linear-gradient(45deg, #2a2a6b, #1563c3); 
+    transition: background 0.3s ease;
+}
+
+.button input[type="submit"]:hover {
+    background: linear-gradient(45deg,   ); 
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 20px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 28px; 
+        margin-top: 210px; 
+    }
+
+    .container .title {
+        font-size: 22px; 
+    }
+
+    .user-details {
+        flex-direction: column; 
+        align-items: stretch; 
+    }
+
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px; 
+        margin-top: 230px; 
+    }
+
+    .container .title {
+        font-size: 20px; 
+    }
+
+    .user-details .input-box {
+        margin-bottom: 15px; 
+    }
+
+    .btn {
+        gap: 10px; 
+    }
+
+    .button input[type="submit"] {
+        padding: 10px; 
+        font-size: 14px;
+    }
+} 
+
