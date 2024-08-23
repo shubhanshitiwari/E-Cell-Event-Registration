@@ -1,70 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Registration Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div class="container">
         <div class="title">
             Event Registration
         </div>
         <!--Attributes-->
-
-        <form acton="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post">
-            <div class="user-details">
-                <div class="input-box">
-                    <div class="formdesign" id="name">
-                        First Name:* <input type="text" name="fname" placeholder="Enter your first name"
-                            required><b><span class="formerror"> </span></b>
-                    </div>
-                </div>
-                <div class="input-box">
-                    <div class="formdesign" >
-                        Last Name:* <input type="text" name="lname" placeholder="Enter your last name"
-                            required><b><span class="formerror"> </span></b>
-                    </div>
-                </div>
-                <div class="input-box">
-                    <div class="formdesign" id="email">
-                        Email*<input type="text" name="femail" placeholder="Enter your valid email" required><b><span
-                                class="formerror"> </span></b>
-                    </div>
-                </div>
-                <div class="input-box">
-                    <div class="formdesign" id="phone">
-                        Mobile No.*<input type="tel" name="fphone" placeholder="Enter your Mobile number" required><b><span
-                                class="formerror"> </span></b>
-                    </div>
-                </div>
-                <div class="input-box">
-                    <div class="formdesign" id="college">
-                        College*<input type="text" name="fcollege" placeholder="Enter your college name" required><b><span
-                                class="formerror"> </span></b>
-                    </div>
-                </div>
-                <div class="input-box">
-                    <div class="formdesign" id="branch">
-                        Branch.*<input type="text" name="fbranch" placeholder="Enter your Branch " required><b><span
-                                class="formerror"> </span></b>
-                    </div>
-                </div>
-                <div class="input-box">
-                    <div class="formdesign" id="enroll">
-                        Enrollment No.*<input type="text" name="fenroll" placeholder="Enter your Enrollment Number."
-                            required><b><span class="formerror"> </span></b>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
         <form action="#" method="post">
             <div class="user-details">
                 <div class="input-box">
@@ -103,7 +50,6 @@
                 </div>
             </div>
         
-
             <!--Textarea-->
             <div class="input-box2">
                 <span class="details2">Why do you want to come for the event?</span>
@@ -112,38 +58,6 @@
         
             <div class="input-box2">
                 <span class="details2">What is your expectation from the event?</span>
-
-                <textarea id="expectation" name="expectation"></textarea>
-            </div>
-
-
-            <!--CheckBox-->
-
-            <div class="event-update">
-                <label class="checkbox-container">
-                    <input type="checkbox" id="event-updates" name="event-updates">
-                    Do you want to get updates in the future about events conducted by E-Cell RGPV?
-                </label>
-            </div>
-
-            <div class="event-update">
-                <label class="checkbox-container">
-                    <input type="checkbox" id="event-updates" name="event-updates">
-                    Is this your first E-Cell RGPV event or have you attended any other events before?
-                </label>
-            </div>
-
-            <!--Buttons-->
-            <div class="btn">
-                <div class="button">
-                    <input id="submit" type="submit" value="Register">
-                </div>
-                <div class="button">
-                    <input type="submit" value="About Event">
-                </div>
-            </div>
-        </form>
-
                 <textarea id="expectations" name="expectations"></textarea>
             </div>
         
@@ -165,12 +79,6 @@
                 </div>
             </div>
         </form>  
-
-    </div>
-
-    <div id="confirmation-message" style="display:none; text-align: center; font-size: 24px; font-weight: bolder;">
-        <p>Thank you for registering!</p>
-        <p>You have been registered successfully.</p>
     </div>
 
 
@@ -179,5 +87,4 @@
     <!--Script-->
     <script src="main.js"></script>
 </body>
-
 </html>
