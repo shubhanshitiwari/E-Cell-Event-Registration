@@ -49,7 +49,7 @@ const registerSchema = new mongoose.Schema ({
         required: true,
         trim: true
     },
-    wantsUpdate:{
+    wantsUpdates:{
         type: Boolean,
         required: true,
         default: false

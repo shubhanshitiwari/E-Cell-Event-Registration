@@ -1,6 +1,6 @@
-import { User } from "../models/register.model";
+import { User } from "../models/register.model.js";
 
-export const registerUser = async((req, res)=>{
+export const registerUser = (async (req, res)=>{
     const {
         firstName,
         lastName,
@@ -14,9 +14,10 @@ export const registerUser = async((req, res)=>{
         wantsUpdates
      } = req.body;
 
+     
 
     
-    const user = User.create({
+    const user = await User.create({
         firstName,
         lastName,
         email,
