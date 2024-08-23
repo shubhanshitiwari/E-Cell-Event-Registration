@@ -40,8 +40,34 @@
             </div>
 
             <div class="input-box">
-                <span class="details">Branch*</span>
-                <input type="text" placeholder="Enter your branch name" required>
+                <label for="branch">Enter Your Branch:</label>
+                    <select id="branch" name="Branch">
+                        <option value="">
+                            Select Branch
+                        </option>
+                        <option value="Computer Science">
+                            Computer Science
+                        </option>
+                        <option value="Information Technology">
+                            Information Technology
+                        </option>
+                        <option value="Electr. And Commu. Engg.">
+                            Electr. And Commu. Engg.
+                        </option>
+                        <option value="Electrical Engg.">
+                            Electrical Engg.
+                        </option>
+                        <option value="Mechanical Engg.">
+                            Mechanical Engg.
+                        </option>
+                        <option value="Civil Engg">
+                            Civil Engg.
+                        </option>
+                        <option value="Petrochemical">
+                            Petrochemical Engg.
+                        </option>
+                    </select>
+                    <span id="branchError" class="error-message"></span>
             </div>
 
             <div class="input-box">
