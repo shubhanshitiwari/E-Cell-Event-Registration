@@ -21,8 +21,8 @@ body {
     /* margin-bottom: 60px; */
     max-width: 700px;
     width: 100%;
-    background-color: rgba(99, 96, 120, 0.2);
-    border: 3px solid rgba(99, 96, 120, 0.2);
+    background-color: rgba(99, 96, 120, 0.25);
+    border: 3px solid rgba(99, 96, 120, 0.25);
     padding: 25px 30px;
     border-radius: 15px;
     position: relative;
