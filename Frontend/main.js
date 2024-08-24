@@ -75,46 +75,7 @@ function validateForm() {
     return returnval;
 }
 
-// confirmation message after submission of the form
-// if (returnval = true) {
-//     document.getElementById('submit').addEventListener('click', function (e) {
-//         document.querySelector(".container").style.display = "none";
-//         document.getElementById('confirmation-message').style.display = 'block';
-
-//     })
-
-// }
-
 // API
-async function registerUser(formData) {
-    try {
-      const response = await axios.post('http://localhost:8000/register', formData, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-    
-      // Success response
-      console.log('Registration successful:', response.data);
-      // handle success (e.g., show success message, redirect, etc.)
-    } catch (error) {
-      // Handle errors
-      if (error.response) {
-        // Server responded with a status other than 2xx
-        console.log('Registration failed:', error.response.data);
-      } else if (error.request) {
-        // No response received
-        console.error('No response received:', error.request);
-      } else {
-        // Other errors
-        console.error('Error occurred:', error.message);
-      }
-      // handle error (e.g., show error message)
-    }
-  }
-  
-  
-
 
 const form = document.getElementById('registrationForm');
 
@@ -137,4 +98,22 @@ form.addEventListener('submit', function (event) {
   
     registerUser(formData);
   });
-  //  api
+async function registerUser(formData) {
+    try {
+      const response = await axios.post('http://localhost:8000/register', formData, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+       console.log('Registration successful:', response.data);
+       alert("Regitration Successfull");
+    } catch (error) {
+      if (error.response) {
+        console.log('Registration failed:', error.response.data);
+      } else if (error.request) {
+        console.error('No response received:', error.request);
+      } else {
+        console.error('Error occurred:', error.message);
+      }
+    }
+  }
