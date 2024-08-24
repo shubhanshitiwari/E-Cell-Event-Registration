@@ -106,7 +106,22 @@ async function registerUser(formData) {
         },
       });
        console.log('Registration successful:', response.data);
-       alert("Regitration Successfull");
+       const popup = document.getElementById("successPopup");
+        const close = document.getElementsByClassName("close")[0];
+        popup.style.display = "block";
+
+        // When the user clicks on <span> (x), close the modal
+        close.onclick = function() {
+            popup.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == popup) {
+                popup.style.display = "none";
+            }
+        }
+      //  alert("Regitration Successfull");
     } catch (error) {
       if (error.response) {
         console.log('Registration failed:', error.response.data);

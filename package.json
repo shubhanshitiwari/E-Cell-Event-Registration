@@ -1,5 +1,16 @@
 {
   "dependencies": {
     "axios": "^1.7.5"
-  }
+  },
+  "name": "e-cell-event-registration",
+  "description": "Registration form",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node backend/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SUDHANSHU TIWARI, SHUBHANSHI TIWARI",
+  "license": "ISC"
 }
