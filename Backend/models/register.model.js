@@ -49,11 +49,6 @@ const registerSchema = new mongoose.Schema ({
         required: true,
         trim: true
     },
-    wantsUpdates:{
-        type: Boolean,
-        required: true,
-        default: false
-    }
 })
 
 export const User = mongoose.model("User", registerSchema)
