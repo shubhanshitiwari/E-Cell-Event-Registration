@@ -100,7 +100,7 @@ form.addEventListener('submit', function (event) {
   });
 async function registerUser(formData) {
     try {
-      const response = await axios.post('https://e-cell-event-registration.vercel.app/register', formData, {
+      const response = await axios.post('https://e-cell-event-registration-backend.vercel.app/register', formData, {
         headers: {
           'Content-Type': 'application/json',
         },
