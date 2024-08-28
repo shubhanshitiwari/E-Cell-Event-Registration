@@ -102,6 +102,9 @@ form .user-details .input-box {
 .user-details .input-box select:hover ,textarea:hover{
     border: 1px solid rgb(233, 233, 236);
 }
+.user-details .input-box select option{
+    color: black;
+}
  textarea {
     padding: 5px;
         width: 100%;
