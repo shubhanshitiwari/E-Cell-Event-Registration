@@ -31,7 +31,7 @@ body {
     box-shadow:10px 10px rgb(31, 239, 203,0.1);
 
 }
-.container::before{
+/*.container::before{
     content: " ";
     position: absolute;
     background: radial-gradient(rgb(47, 189, 194), transparent,transparent);
@@ -53,7 +53,7 @@ body {
     position: absolute;
     background-color: rgba(99, 96, 120, 0.9);
     
-}
+}*/
 .container .title {
     font-size: 25px;
     font-weight: 500;
