@@ -255,6 +255,49 @@ form .user-details .input-box {
 
     
 }
+@media (max-width: 560px) {
+    .container {
+        padding: 20px; 
+        margin-top: 273px; 
+    }
+
+    .container .title {
+        font-size: 20px; 
+    }
+
+    .user-details .input-box {
+        margin-bottom: 15px; 
+    }
+
+    .btn {
+        gap: 10px; 
+    }
+
+    .button input[type="submit"] {
+        padding: 10px; 
+        font-size: 14px;
+    }
+
+    .popup-content {
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        justify-content: center;
+    }
+    .para{
+        font-size: 15px;
+    }
+    .circle{
+        left:3%;
+
+    }
+    .close {
+      height: fit-content;
+    }
+} 
+
 
 @media (max-width: 480px) {
     .container {
