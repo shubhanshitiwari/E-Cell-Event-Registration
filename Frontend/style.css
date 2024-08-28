@@ -87,7 +87,7 @@ form .user-details .input-box {
     margin-bottom: 5px;
 }
 
-.user-details .input-box input {
+.user-details .input-box input,.user-details .input-box select {
     height: 45px;
     width: 100%;
     outline: none;
@@ -98,7 +98,7 @@ form .user-details .input-box {
     padding-right: 15px;
     font-size: 14px;
 }
-.user-details .input-box input:hover ,textarea:hover{
+.user-details .input-box input:hover,.user-details .input-box select:hover ,textarea:hover{
     border: 1px solid rgb(233, 233, 236);
 }
  textarea {
