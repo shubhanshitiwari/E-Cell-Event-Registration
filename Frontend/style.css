@@ -259,9 +259,7 @@ form .user-details .input-box {
 @media (max-width: 480px) {
     .container {
         padding: 20px; 
-        margin-top: 400px; 
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-top: 320px; 
     }
 
     .container .title {
